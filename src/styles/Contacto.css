@@ -1,0 +1,57 @@
+/* src/pages/Contacto.css */
+
+.main-contacto {
+  /* Tu fondo original */
+  background: linear-gradient(45deg, aquamarine, pink);
+  background-image: url("starsolidcolors.png"); /* Ruta desde public */
+  min-height: 100vh;
+  padding: 20px 0;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Tu estilo de formulario original */
+.custom-form {
+  margin: 15px auto;
+  padding: 20px;
+  border: dotted black 4px;
+  border-style: double;
+  border-radius: 20px;
+  background-color: rgb(247, 247, 184);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.foto-equipo {
+  border-radius: 15px;
+  border: solid red 2px;
+  border-style: dashed;
+  max-width: 100%;
+  height: auto;
+}
+
+.figcaption-space {
+  font-style: italic;
+  margin-top: 5px;
+  color: red;
+  font-weight: bold;
+}
+
+/* Tu botón original con hover */
+.btn-espacial {
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px grey;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-espacial:hover {
+  background-color: rgb(70, 128, 70);
+  color: beige;
+  transform: scale(1.05);
+}

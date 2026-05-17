@@ -1,0 +1,128 @@
+/* Estilos Globales de la Galaxia */
+body {
+  background:
+    url("/img/starsolidcolors.png"), linear-gradient(45deg, aquamarine, pink);
+  background-attachment: fixed;
+  background-size: auto, cover;
+
+  min-height: 100vh;
+  margin: 0;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.contenedor-cosmico {
+  background-color: rgb(247, 247, 184);
+  border: dotted black 4px;
+  border-style: double;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-espacial {
+  background-color: aliceblue;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 4px 4px 8px grey;
+  transition: 0.3s;
+  border: 1px solid #ccc;
+}
+
+.btn-espacial:hover {
+  background-color: rgb(70, 128, 70) !important;
+  color: beige !important;
+  transform: translateY(-2px);
+}
+
+/* Contenedor principal en la esquina */
+.acciones-flotantes {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column; /* Apila los iconos verticalmente */
+  gap: 12px; /* Espacio entre el corazón y el share */
+  z-index: 10;
+}
+
+/* Estilo común para los contenedores de los iconos */
+.icono-accion {
+  cursor: pointer;
+  line-height: 0;
+  transition: transform 0.2s ease;
+  /* Fondo semitransparente para mejorar la visibilidad sobre el fondo */
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.icono-accion:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Tamaños de las imágenes */
+.corazon-img,
+.share-img {
+  width: 26px;
+  height: auto;
+}
+
+/* Animación del corazón activo */
+.corazon-img.activo {
+  animation: pop 0.3s linear;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+/* Clase específica para el botón de la Home sin romper los demás */
+.btn-home {
+  width: max-content !important;
+  min-width: 250px;
+  white-space: nowrap;
+  display: inline-block;
+  color: black;
+}
+
+/* Media query para tablets y celulares (pantallas menores a 768px) */
+@media (max-width: 768px) {
+  .contenedor-cosmico {
+    padding: 15px; /* Menos padding en pantallas chicas */
+    border-width: 2px; /* Un borde más fino */
+  }
+
+  .acciones-flotantes {
+    top: 10px;
+    right: 10px;
+    gap: 8px; /* Menos espacio entre iconos */
+  }
+
+  .corazon-img,
+  .share-img {
+    width: 22px; /* Iconos  más pequeños */
+  }
+}
+
+.link-hover {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  display: inline-block;
+}
+
+.link-hover:hover {
+  transform: translateY(-3px) scale(1.2);
+  color: #00d4ff !important; /* Un celeste espacial */
+}
